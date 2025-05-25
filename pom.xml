@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.spring</groupId>
-	<artifactId>menubatch</artifactId>
+	<artifactId>vector-store-loader</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>menubatch</name>
+	<name>vector-store-loader</name>
 	<description>Loads a vector store with menu data</description>
 	<properties>
 		<java.version>17</java.version>
