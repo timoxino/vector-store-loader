@@ -1,0 +1,32 @@
+vector:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sbdocs
+    username: admin
+    password: password
+    driver-class-name: org.postgresql.Driver
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/task
+    username: admin
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
+  application:
+    name: ragbatchone
+  ai:
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 1536
+        initialize-schema: true
+
+  main:
+    web-application-type: none
+
+  batch:
+    jdbc:
+      initialize-schema: always
+
+logging:
+  level:
+    org.springframework.cloud.task: debug
